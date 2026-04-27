@@ -1,0 +1,183 @@
+model,prompt,answer
+gpt,"
+Schreibe eine Python-Funktion, die prüft, ob ein Wort ein Palindrom ist.
+Füge außerdem 3 kurze Unit-Tests hinzu.
+","Hier ist eine Python-Funktion, die überprüft, ob ein Wort ein Palindrom ist, sowie drei kurze Unit-Tests:
+
+```python
+def ist_palindrom(wort):
+    # Entferne Leerzeichen und konvertiere das Wort in Kleinbuchstaben
+    wort = wort.replace("" "", """").lower()
+    # Vergleiche das Wort mit seiner Umkehrung
+    return wort == wort[::-1]
+
+# Unit-Tests
+def test_ist_palindrom():
+    assert ist_palindrom(""Anna"") == True, ""Testfall 1 fehlgeschlagen""
+    assert ist_palindrom(""Lagerregal"") == True, ""Testfall 2 fehlgeschlagen""
+    assert ist_palindrom(""Hallo"") == False, ""Testfall 3 fehlgeschlagen""
+    print(""Alle Testfälle bestanden!"")
+
+# Führe die Tests aus
+test_ist_palindrom()
+```
+
+### Erklärung:
+- Die Funktion `ist_palindrom` entfernt Leerzeichen und konvertiert das Wort in Kleinbuchstaben, um die Überprüfung zu erleichtern.
+- Sie vergleicht das Wort mit seiner umgekehrten Version (`wort[::-1]`).
+- Die Unit-Tests verwenden `assert`, um sicherzustellen, dass die Funktion die erwarteten Ergebnisse zurückgibt. Wenn ein Test fehlschlägt, wird eine Fehlermeldung ausgegeben. Wenn alle Tests erfolgreich sind, wird eine Bestätigung ausgegeben."
+claude,"
+Schreibe eine Python-Funktion, die prüft, ob ein Wort ein Palindrom ist.
+Füge außerdem 3 kurze Unit-Tests hinzu.
+","# Palindrom-Prüfung mit Unit-Tests
+
+```python
+def ist_palindrom(wort):
+    """"""
+    Prüft, ob ein Wort ein Palindrom ist.
+    
+    Args:
+        wort (str): Das zu prüfende Wort
+        
+    Returns:
+        bool: True wenn das Wort ein Palindrom ist, sonst False
+    """"""
+    # Konvertiere zu Kleinbuchstaben und entferne Leerzeichen
+    wort_bereinigt = wort.lower().replace("" "", """")
+    
+    # Vergleiche das Wort mit seiner Umkehrung
+    return wort_bereinigt == wort_bereinigt[::-1]
+
+
+# Unit-Tests
+def test_palindrom():
+    # Test 1: Einfaches Palindrom
+    assert ist_palindrom(""anna"") == True, ""Test 1 fehlgeschlagen: 'anna' sollte True sein""
+    
+    # Test 2: Kein Palindrom
+    assert ist_palindrom(""python"") == False, ""Test 2 fehlgeschlagen: 'python' sollte False sein""
+    
+    # Test 3: Palindrom mit Großbuchstaben
+    assert ist_palindrom(""Otto"") == True, ""Test 3 fehlgeschlagen: 'Otto' sollte True sein""
+    
+    print(""✓ Alle Tests erfolgreich bestanden!"")
+
+
+# Tests ausführen
+if __name__ == ""__main__"":
+    test_palindrom()
+    
+    # Zusätzliche Beispiele
+    print(""\nBeispiele:"")
+    print(f""'Lagerregal' ist Palindrom: {ist_palindrom('Lagerregal')}"")
+    print(f""'Reliefpfeiler' ist Palindrom: {ist_palindrom('Reliefpfeiler')}"")
+    print(f""'Hallo' ist Palindrom: {ist_palindrom('Hallo')}"")
+```
+
+## Ausgabe:
+```
+✓ Alle Tests erfolgreich bestanden!
+
+Beispiele:
+'Lagerregal' ist Palindrom: True
+'Reliefpfeiler' ist Palindrom: True
+'Hallo' ist Palindrom: False
+```
+
+## Erklärung:
+
+1. **Funktion `ist_palindrom()`**: 
+   - Konvertiert das Wort in Kleinbuchstaben für Case-Insensitive Vergleich
+   - Entfernt Leerzeichen
+   - Vergleicht das Wort mit seiner Umkehrung (`[::-1]`)
+
+2. **Die drei Unit-Tests prüfen**:
+   - Einfaches Palindrom in Kleinbuchstaben
+   - Ein Wort, das kein Palindrom ist
+   - Palindrom mit gemischter Groß-/Kleinschreibung"
+gemini,"
+Schreibe eine Python-Funktion, die prüft, ob ein Wort ein Palindrom ist.
+Füge außerdem 3 kurze Unit-Tests hinzu.
+","Selbstverständlich, hier ist eine Python-Funktion, die prüft, ob ein Wort ein Palindrom ist, inklusive einer Erklärung und drei Unit-Tests.
+
+### Python-Funktion
+
+Die Funktion bereinigt zuerst die Eingabe, indem sie sie in Kleinbuchstaben umwandelt. Das stellt sicher, dass die Groß- und Kleinschreibung ignoriert wird (z.B. wird ""Anna"" korrekt als Palindrom erkannt). Anschließend vergleicht sie das bereinigte Wort mit seiner umgekehrten Version.
+
+```python
+def ist_palindrom(wort: str) -> bool:
+    """"""
+    Prüft, ob ein gegebenes Wort ein Palindrom ist.
+
+    Die Prüfung ignoriert die Groß- und Kleinschreibung sowie führende/folgende Leerzeichen.
+
+    Args:
+        wort: Das zu prüfende Wort als String.
+
+    Returns:
+        True, wenn das Wort ein Palindrom ist, ansonsten False.
+    """"""
+    # 1. Bereinige den String:
+    #    - .strip() entfernt Leerzeichen am Anfang und Ende.
+    #    - .lower() wandelt alle Buchstaben in Kleinbuchstaben um.
+    bereinigtes_wort = wort.strip().lower()
+
+    # 2. Vergleiche das bereinigte Wort mit seiner umgekehrten Version.
+    #    Die [::-1] Notation in Python ist eine einfache Methode, um einen String umzukehren.
+    return bereinigtes_wort == bereinigtes_wort[::-1]
+
+```
+
+### Unit-Tests
+
+Hier sind drei kurze Unit-Tests, die in einer einfachen Testfunktion zusammengefasst sind. Sie verwenden `assert`, um zu überprüfen, ob die Funktion für verschiedene Eingaben das erwartete Ergebnis liefert. Wenn eine `assert`-Anweisung fehlschlägt, wird ein `AssertionError` ausgelöst und das Programm bricht mit einer Fehlermeldung ab.
+
+```python
+# --- Unit-Tests ---
+
+def teste_palindrom_funktion():
+    """"""
+    Führt 3 kurze Tests für die ist_palindrom Funktion aus.
+    """"""
+    print(""Starte Unit-Tests..."")
+
+    # Test 1: Ein einfaches Palindrom in Kleinbuchstaben. Sollte True zurückgeben.
+    assert ist_palindrom(""radar"") == True, ""Fehler bei Test 1: 'radar' sollte ein Palindrom sein.""
+
+    # Test 2: Ein Wort, das kein Palindrom ist. Sollte False zurückgeben.
+    assert ist_palindrom(""hallo"") == False, ""Fehler bei Test 2: 'hallo' sollte kein Palindrom sein.""
+
+    # Test 3: Ein Palindrom mit gemischter Groß- und Kleinschreibung. Sollte True zurückgeben.
+    assert ist_palindrom(""Lagerregal"") == True, ""Fehler bei Test 3: 'Lagerregal' sollte ein Palindrom sein.""
+
+    print(""Alle Tests erfolgreich bestanden!"")
+
+
+# --- Ausführung des Codes ---
+
+# Dieser Block wird nur ausgeführt, wenn das Skript direkt gestartet wird.
+if __name__ == ""__main__"":
+    # Beispielaufrufe der Funktion
+    wort1 = ""Anna""
+    wort2 = ""Python""
+    
+    print(f""Ist '{wort1}' ein Palindrom? -> {ist_palindrom(wort1)}"")
+    print(f""Ist '{wort2}' ein Palindrom? -> {ist_palindrom(wort2)}"")
+    
+    print(""-"" * 20)
+
+    # Ausführung der Unit-Tests
+    teste_palindrom_funktion()
+```
+
+### Ausgabe bei Ausführung
+
+Wenn Sie diesen Code ausführen, erhalten Sie die folgende Ausgabe:
+
+```
+Ist 'Anna' ein Palindrom? -> True
+Ist 'Python' ein Palindrom? -> False
+--------------------
+Starte Unit-Tests...
+Alle Tests erfolgreich bestanden!
+```"

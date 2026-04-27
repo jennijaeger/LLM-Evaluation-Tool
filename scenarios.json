@@ -1,0 +1,81 @@
+[
+  {
+    "id": "code_gen_1",
+    "category": "code_generation",
+    "prompt": "Schreibe eine Python-Funktion, die prüft, ob eine Zahl eine Primzahl ist. Füge 3 Unit-Tests hinzu."
+  },
+  {
+    "id": "code_gen_2",
+    "category": "code_generation",
+    "prompt": "Schreibe eine Python-Funktion, die eine Liste sortiert, ohne die eingebaute sort()-Funktion zu verwenden."
+  },
+  {
+    "id": "code_gen_3",
+    "category": "code_generation",
+    "prompt": "Schreibe eine Python-Funktion, die die Fibonacci-Zahlen bis zu n berechnet."
+  },
+
+  {
+    "id": "bug_fix_1",
+    "category": "bug_fixing",
+    "prompt": "Finde den Fehler im folgenden Python-Code und korrigiere ihn:\n\nfor i in range(5)\n    print(i)"
+  },
+  {
+    "id": "bug_fix_2",
+    "category": "bug_fixing",
+    "prompt": "Finde den Fehler im folgenden Python-Code und korrigiere ihn:\n\ndef add(a, b):\nreturn a + b"
+  },
+  {
+    "id": "bug_fix_3",
+    "category": "bug_fixing",
+    "prompt": "Finde den Fehler im folgenden Python-Code und korrigiere ihn:\n\nnumbers = [1,2,3]\nprint(numbers[3])"
+  },
+
+  {
+    "id": "json_1",
+    "category": "json_output",
+    "prompt": "Extrahiere Name, Alter und Stadt aus folgendem Text und gib sie als JSON zurück:\n\nMax Müller ist 29 Jahre alt und lebt in Berlin."
+  },
+  {
+    "id": "json_2",
+    "category": "json_output",
+    "prompt": "Extrahiere Produktname und Preis aus folgendem Text und gib sie als JSON zurück:\n\nProdukt: Laptop, Preis: 999 Euro"
+  },
+  {
+    "id": "json_3",
+    "category": "json_output",
+    "prompt": "Extrahiere Titel und Autor aus folgendem Text und gib sie als JSON zurück:\n\nBuch: Der Hobbit von J.R.R. Tolkien"
+  },
+
+  {
+    "id": "summary_1",
+    "category": "summarization",
+    "prompt": "Fasse folgenden Text in genau 3 Bulletpoints zusammen:\n\nKünstliche Intelligenz wird zunehmend in Unternehmen eingesetzt, um Prozesse zu automatisieren. Gleichzeitig entstehen neue Herausforderungen im Bereich Datenschutz und Ethik."
+  },
+  {
+    "id": "summary_2",
+    "category": "summarization",
+    "prompt": "Fasse folgenden Text in genau 3 Bulletpoints zusammen:\n\nCloud Computing ermöglicht Unternehmen den Zugriff auf flexible IT-Ressourcen. Es reduziert Kosten und erhöht die Skalierbarkeit von Anwendungen."
+  },
+  {
+    "id": "summary_3",
+    "category": "summarization",
+    "prompt": "Fasse folgenden Text in genau 3 Bulletpoints zusammen:\n\nCybersecurity ist ein zentraler Bestandteil moderner IT-Systeme. Unternehmen müssen ihre Daten vor Angriffen schützen."
+  },
+
+  {
+    "id": "reasoning_1",
+    "category": "reasoning",
+    "prompt": "Ein Zug fährt um 10:00 Uhr mit 80 km/h los. Ein zweiter Zug startet um 11:00 Uhr mit 120 km/h. Wann holt der zweite Zug den ersten ein?"
+  },
+  {
+    "id": "reasoning_2",
+    "category": "reasoning",
+    "prompt": "Du hast 3 Aufgaben A, B und C. Aufgabe B hängt von A ab, und C hängt von B ab. In welcher Reihenfolge sollten die Aufgaben erledigt werden?"
+  },
+  {
+    "id": "reasoning_3",
+    "category": "reasoning",
+    "prompt": "Wenn alle Katzen Tiere sind und einige Tiere schwarz sind, können alle Katzen schwarz sein?"
+  }
+]
