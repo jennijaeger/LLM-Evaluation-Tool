@@ -180,7 +180,7 @@ Planned enhancements:
 ---
 
 # Author
-Jenny Jäger
+Jennifer Jäger
 
 This project was developed as part of a practical AI engineering portfolio focused on evaluating and comparing large language models in real-world scenarios.
 
